@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="6.1.0.7880" date="7/14/15 3:51 PM">
+  <dashboardconfig memento.version="6.1.0.7880" suppresssavewarning="false" created="2015-07-14T15:51:34-0600" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" modifiedbyname="dmabxw0" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" opendrilldowninnewdashboard="true" groupname="" autoreplacesession="false" revision="0000014e-8e8d-2e70-9e44-6dbea7549df1" locationassource="false" localizationenabled="false" name="WebSphere Portal SLA Compliance" authorname="dmabxw0" modified="2015-07-14T15:51:34-0600" id="e0b7836e-baa9-4861-81fe-f855d3875eca">
+    <reportconfig print.images="true" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" orientation="portrait" description="" title="" type="PDF" enabled="true" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" lines.per.table="100" pagesize="A4" override="false" optimizeequalcolumns="true" print.legends="true" levels.per.tree="10" />
+    <filter>
+      <criterion type="admfilteranalyzer" />
+      <criterion mode="all" type="agents" completepurepath="true">
+        <textpattern name="agentname" type="contains" enabled="true" />
+        <textpattern name="agenthost" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="and" />
+      <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+      <criterion mode="all" type="applications" />
+      <criterion showrendering="true" isactive="true" shownetwork="true" type="browserpathtype" showjavascript="true" />
+      <criterion pageenabled="false" timerenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern match="contains" text="" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern match="contains" text="" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm" />
+      <criterion type="casuemdimension" />
+      <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+      <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
+      <criterion mode="all" type="hosts" completepurepath="true" />
+      <criterion severitiesmode="all" statesmode="all" type="incident" rulesmode="all" severities="" states="" />
+      <criterion type="or" />
+      <criterion mode="all" enduser="false" type="purepaths" />
+      <criterion contenttypegroupsmode="all" showrendering="true" javascripttriggersmode="all" isactive="false" shownetwork="true" requestcriterion="ALL" type="riapurepathtype" showjavascript="true" />
+      <criterion includemeasurename="true" includetestname="true" teststatus="OK" type="tests" />
+      <criterion type="threads" enabled="false" filterbyid="false" />
+      <criterion type="timeframe">
+        <timeframe type="Last 30min" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern name="timerName" type="contains" enabled="true" />
+        <textpattern name="pageContext" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern match="contains" text="" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern match="contains" text="" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+    <designconfig namefontsize="10" descriptionshow="true" headertype="DEFAULT" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" clienttheme="DEFAULT" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" autoadjustfontsizes="false" />
+    <dashboardlayout>
+      <portletfolder selectionindex="0" relationtype="LEFT" portletconfigorder="e670efd1-351d-4a8c-a9db-2964444d3626" folderid="folder" relatedfolderid="DashboardLayout.blankArea" ratio="0.95">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@38bc7d12" relatedfolderid="folder" ratio="0.5" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@19f32781" relatedfolderid="org.eclipse.ui.internal.ViewStack@38bc7d12" ratio="0.49893844" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@4e72fcbf" relatedfolderid="org.eclipse.ui.internal.ViewStack@38bc7d12" ratio="0.49936467" />
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="465a1c1e-da06-4151-b90c-a04fe6731c68" folderid="org.eclipse.ui.internal.ViewStack@50bb8b44" relatedfolderid="org.eclipse.ui.internal.ViewStack@38bc7d12" ratio="0.17916137">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="ac0135ef-372d-420a-8094-21cea65d503b" folderid="org.eclipse.ui.internal.ViewStack@7ad0fe4d" relatedfolderid="org.eclipse.ui.internal.ViewStack@50bb8b44" ratio="0.30360934">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="961f0fee-3108-40e6-9c25-82bff2c0fc64" folderid="org.eclipse.ui.internal.ViewStack@31428f76" relatedfolderid="org.eclipse.ui.internal.ViewStack@7ad0fe4d" ratio="0.5">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="3f02896e-ce62-4414-88ce-295ba4159c1b" folderid="org.eclipse.ui.internal.ViewStack@5c141c7b" relatedfolderid="org.eclipse.ui.internal.ViewStack@31428f76" ratio="0.5">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="f14e35ea-bc08-4fae-869a-a50a72c89393" folderid="org.eclipse.ui.internal.ViewStack@4df8443f" relatedfolderid="org.eclipse.ui.internal.ViewStack@5c141c7b" ratio="0.5">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="fe6364f4-8b65-4b55-90f4-a7b040af83f3" folderid="org.eclipse.ui.internal.ViewStack@5799b8a2" relatedfolderid="org.eclipse.ui.internal.ViewStack@4df8443f" ratio="0.17026684">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="042e4f8d-cdb9-4dea-ab4b-835de519730a" folderid="org.eclipse.ui.internal.ViewStack@4e58eda2" relatedfolderid="org.eclipse.ui.internal.ViewStack@5799b8a2" ratio="0.4992343">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="5a848b03-7a7e-4180-9876-72651d13374e" folderid="org.eclipse.ui.internal.ViewStack@3bea478e" relatedfolderid="org.eclipse.ui.internal.ViewStack@31428f76" ratio="0.17534943">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="54c1763b-b08b-4031-b04e-bc6c6162978f" folderid="org.eclipse.ui.internal.ViewStack@4a83d61c" relatedfolderid="org.eclipse.ui.internal.ViewStack@3bea478e" ratio="0.49845916">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="9b3930de-cb56-4299-9ad8-5f9e019f08d3" folderid="org.eclipse.ui.internal.ViewStack@1f317664" relatedfolderid="folder" ratio="0.49893844">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@31428f76" locationassource="false" addfilterinfo="false" name="Total User Action Count" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="961f0fee-3108-40e6-9c25-82bff2c0fc64">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="StackedBarChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(35,48,148,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="9ef0f2a9-03e7-4912-a355-4cbd2fd93612" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Synthetic User Actions - User Action Response Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Synthetic User Actions (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Synthetic User Actions (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Synthetic User Actions" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(73,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="c3472254-eb1c-4b20-9b5a-0e36a27f9069" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Real User Actions - User Action Response Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Real User Actions (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Real User Actions (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Real User Actions" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@1f317664" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(94,76,142,255)" invertcolors="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="9b3930de-cb56-4299-9ad8-5f9e019f08d3">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Lucida Grande" style="NORMAL" height="5" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@7ad0fe4d" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(94,76,142,255)" invertcolors="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="ac0135ef-372d-420a-8094-21cea65d503b">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Lucida Grande" style="NORMAL" height="5" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="UseBackgroundImageHeight" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="SLA Compliance" folderid="folder" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="e670efd1-351d-4a8c-a9db-2964444d3626">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Lucida Grande" style="BOLD" height="26" />
+      <image offset="-1" length="3448">
+        <chunk offset="0" data="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" />
+      </image>
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@4df8443f" locationassource="false" addfilterinfo="false" name="Total PurePath Count" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="f14e35ea-bc08-4fae-869a-a50a72c89393">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="StackedBarChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="false" lockyaxis="false" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(36,48,147,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="11922766-d65c-4f6b-9300-cb726037e6f7" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="Measure" fetchbaseline="false" unit="ms" name="PurePath Response Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="PurePath Response Time" agentname="" metricsimpledisplayname="PurePath Response Time" agenthost="" metrickeyid="PurePath Response Time" keyid="PurePath Response Time" metricgroupkey="PurePaths" collector="" measuretype="Measure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@5799b8a2" locationassource="false" addfilterinfo="false" name="PurePath SLA Count" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="fe6364f4-8b65-4b55-90f4-a7b040af83f3">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="ClusteredBarChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="" splitcharts="true" limititems="false" showlegend="false" lockyaxis="false" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(73,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="862644de-20c0-4f5e-abfd-1af19562691d" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Purepath Response Time - Above SLA" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Purepath Response Time - Above SLA" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Purepath Response Time - Above SLA" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Purepath Response Time - Above SLA" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(73,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="fb50851d-99de-47b6-acf9-df9eea9245ad" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="PurePath Response Time - Meets SLA" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="3" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="PurePath Response Time - Meets SLA" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="PurePath Response Time - Meets SLA" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="PurePath Response Time - Meets SLA" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(73,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="42557e43-581a-44dd-9dec-1456f844c394" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="PurePath Response Time - Warning SLA" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="PurePath Response Time - Warning SLA" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="PurePath Response Time - Warning SLA" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="PurePath Response Time - Warning SLA" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="Measure" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="true" hidden="false" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@4e58eda2" locationassource="false" addfilterinfo="false" name="PurePath SLA Time" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="042e4f8d-cdb9-4dea-ab4b-835de519730a">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="LineChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="" splitcharts="true" limititems="false" showlegend="false" lockyaxis="false" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(73,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="8b94d027-0ccc-4f60-92db-3c1c6b4ddb6f" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Purepath Response Time - Above SLA" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Purepath Response Time - Above SLA" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Purepath Response Time - Above SLA" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Purepath Response Time - Above SLA" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(73,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="ba8e5805-0f56-4bd5-8bc8-7c6042ed400f" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="PurePath Response Time - Warning SLA" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="PurePath Response Time - Warning SLA" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="PurePath Response Time - Warning SLA" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="PurePath Response Time - Warning SLA" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(73,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="c15ef913-afee-48cf-bdde-62337036fabb" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="PurePath Response Time - Meets SLA" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="3" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="PurePath Response Time - Meets SLA" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="PurePath Response Time - Meets SLA" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="PurePath Response Time - Meets SLA" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="Measure" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@5c141c7b" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(94,76,142,255)" invertcolors="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="3f02896e-ce62-4414-88ce-295ba4159c1b">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Lucida Grande" style="NORMAL" height="5" />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@50bb8b44" locationassource="false" addfilterinfo="false" name="Visit SLA" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="465a1c1e-da06-4151-b90c-a04fe6731c68">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="1min" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="StackedBarChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="" splitcharts="true" limititems="false" showlegend="false" lockyaxis="false" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(11,23,76,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" groupingcriterion="BTSP2" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="a074437e-1666-42df-881a-23cb5566ba1a" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" groupingcriterion2="BTSP1" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Visits by User Experience and Client Type" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="count">
+            <tagtolabel>
+              <taglabelentry value="Browser of Visits" key="BTSP2" />
+              <taglabelentry value="User Experience of Visits" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Visits by User Experience and Client Type" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Visits by User Experience and Client Type" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="count" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Visits by User Experience and Client Type" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(133,20,68,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="a074437e-1666-42df-881a-23cb5566ba1a" groupingcriterion="BTSP2" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="ba4460e8-3305-3442-ad79-51aad95680e9" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" groupingcriterion2="BTSP1" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Visits by User Experience and Client Type" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="count">
+            <tagtolabel>
+              <taglabelentry value="Browser of Visits" key="BTSP2" />
+              <taglabelentry value="User Experience of Visits" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Visits by User Experience and Client Type" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Visits by User Experience and Client Type" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Gomez Agent" key="BTSP2" />
+              <tag type="0" value="frustrated" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="count" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Visits by User Experience and Client Type" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(17,76,13,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="a074437e-1666-42df-881a-23cb5566ba1a" groupingcriterion="BTSP2" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="fdc9af36-2f6f-3f78-a219-8818669d4126" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" groupingcriterion2="BTSP1" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Visits by User Experience and Client Type" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="count">
+            <tagtolabel>
+              <taglabelentry value="Browser of Visits" key="BTSP2" />
+              <taglabelentry value="User Experience of Visits" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Visits by User Experience and Client Type" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Visits by User Experience and Client Type" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Chrome" key="BTSP2" />
+              <tag type="0" value="satisfied" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="count" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Visits by User Experience and Client Type" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(242,217,51,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="a074437e-1666-42df-881a-23cb5566ba1a" groupingcriterion="BTSP2" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="0ed3a878-0210-3934-859b-b1b691f76ce4" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" groupingcriterion2="BTSP1" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Visits by User Experience and Client Type" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="count">
+            <tagtolabel>
+              <taglabelentry value="Browser of Visits" key="BTSP2" />
+              <taglabelentry value="User Experience of Visits" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Visits by User Experience and Client Type" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Visits by User Experience and Client Type" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Gomez Agent" key="BTSP2" />
+              <tag type="0" value="tolerating" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="count" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Visits by User Experience and Client Type" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(90,196,82,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="a074437e-1666-42df-881a-23cb5566ba1a" groupingcriterion="BTSP2" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="49ab040d-95f1-39eb-9553-0c35c13b7116" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" groupingcriterion2="BTSP1" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Visits by User Experience and Client Type" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="count">
+            <tagtolabel>
+              <taglabelentry value="Browser of Visits" key="BTSP2" />
+              <taglabelentry value="User Experience of Visits" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Visits by User Experience and Client Type" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Visits by User Experience and Client Type" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Gomez Agent" key="BTSP2" />
+              <tag type="0" value="satisfied" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="count" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Visits by User Experience and Client Type" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="Tag" splittag="User Experience of Visits" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="572" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="true" hidden="false" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@4a83d61c" locationassource="false" addfilterinfo="false" name="User Action SLA Time" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="54c1763b-b08b-4031-b04e-bc6c6162978f">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="LineChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="" splitcharts="true" limititems="false" showlegend="false" lockyaxis="false" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(74,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="86f18d8a-3975-4ba1-9fe7-9dd1095237fd" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="User Action PurePath Response Time - Warning SLA" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="User Action PurePath Response Time - Warning SLA" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="User Action PurePath Response Time - Warning SLA" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="User Action PurePath Response Time - Warning SLA" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(74,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="ce3588b9-f819-429a-ab10-c3c68567b29d" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="User Action PurePath Resonse Time - Above SLA" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="User Action PurePath Resonse Time - Above SLA" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="User Action PurePath Resonse Time - Above SLA" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="User Action PurePath Resonse Time - Above SLA" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(74,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="59b32ccb-0908-401c-bc1e-75efecd57f14" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="User Action PurePath Response Time - Meets SLA" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="3" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="User Action PurePath Response Time - Meets SLA" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="User Action PurePath Response Time - Meets SLA" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="User Action PurePath Response Time - Meets SLA" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="Measure" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@3bea478e" locationassource="false" addfilterinfo="false" name="User Action SLA Count" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="5a848b03-7a7e-4180-9876-72651d13374e">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="ClusteredBarChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="" splitcharts="true" limititems="false" showlegend="false" lockyaxis="false" showlabels="true">
+          <legendcomposition measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(74,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="fd23a2ac-b8fb-4d9f-bfd3-86ae506a0796" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="User Action PurePath Resonse Time - Above SLA" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="User Action PurePath Resonse Time - Above SLA" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="User Action PurePath Resonse Time - Above SLA" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="User Action PurePath Resonse Time - Above SLA" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(74,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="4c2281f0-560c-4022-86c0-f4766a2a2ef0" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="User Action PurePath Response Time - Meets SLA" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="3" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="User Action PurePath Response Time - Meets SLA" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="User Action PurePath Response Time - Meets SLA" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="User Action PurePath Response Time - Meets SLA" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(74,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="73af4132-87f6-49f4-a187-778a2d103426" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="User Action PurePath Response Time - Warning SLA" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="User Action PurePath Response Time - Warning SLA" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="User Action PurePath Response Time - Warning SLA" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="User Action PurePath Response Time - Warning SLA" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="Measure" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
+
