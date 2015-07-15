@@ -6,4 +6,4 @@
 The Dynatrace FastPack for WebSphere Portal
 provides a preconfigured Dynatrace profile custom tailored to WebSphere POrtal environments. This FastPack contains sensors, a template system profile with measures and business transactions, and dashboards for the WebSphere Portal platform. If you are using UEM, you will also get visitor tagging, along with customized dashboards for WebSphere Portal User Experience.
 
-Find further information in the [dynaTrace community](https://community.dynatrace.com/community/display/DL/WebSphere+Portal+Fastpack). 
+Find further information in the [dynaTrace community](https://community.dynatrace.com/community/display/DL/WebSphere+Portal+FastPack). 
