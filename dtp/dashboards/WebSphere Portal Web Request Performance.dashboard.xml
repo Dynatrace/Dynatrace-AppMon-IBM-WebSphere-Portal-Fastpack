@@ -1,0 +1,1670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="6.1.0.7880" date="7/16/15 4:26 PM">
+  <dashboardconfig memento.version="6.1.0.7880" suppresssavewarning="false" created="2015-07-16T16:18:08-0600" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" modifiedbyname="dmabxw0" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" opendrilldowninnewdashboard="true" groupname="" autoreplacesession="false" revision="0000014e-98fa-2c28-8726-d3011490444b" locationassource="false" localizationenabled="true" name="WebSphere Portal Web Request Performance" authorname="dmabxw0" modified="2015-07-16T16:26:49-0600" id="08f2e422-53f4-4634-b86c-ac22c85c5c90">
+    <reportconfig print.images="true" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" orientation="portrait" description="" title="" type="PDF" enabled="true" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" lines.per.table="100" pagesize="A4" override="false" optimizeequalcolumns="true" print.legends="true" levels.per.tree="10" />
+    <filter>
+      <criterion type="admfilteranalyzer" />
+      <criterion mode="all" type="agents" completepurepath="true">
+        <textpattern name="agentname" type="contains" enabled="true" />
+        <textpattern name="agenthost" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="and" />
+      <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+      <criterion mode="all" type="applications" />
+      <criterion showrendering="true" isactive="true" shownetwork="true" type="browserpathtype" showjavascript="true" />
+      <criterion pageenabled="false" timerenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern match="contains" text="" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern match="contains" text="" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm" />
+      <criterion type="casuemdimension" />
+      <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+      <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
+      <criterion mode="all" type="hosts" completepurepath="true" />
+      <criterion severitiesmode="all" statesmode="all" type="incident" rulesmode="all" severities="" states="" />
+      <criterion type="or" />
+      <criterion mode="all" enduser="false" type="purepaths" />
+      <criterion contenttypegroupsmode="all" showrendering="true" javascripttriggersmode="all" isactive="false" shownetwork="true" requestcriterion="ALL" type="riapurepathtype" showjavascript="true" />
+      <criterion includemeasurename="true" includetestname="true" teststatus="OK" type="tests" />
+      <criterion type="threads" enabled="false" filterbyid="false" />
+      <criterion type="timeframe">
+        <timeframe type="Last 15min" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern name="timerName" type="contains" enabled="true" />
+        <textpattern name="pageContext" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern match="contains" text="" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern match="contains" text="" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+    <designconfig namefontsize="10" descriptionshow="true" headertype="DEFAULT" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" clienttheme="DEFAULT" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" autoadjustfontsizes="false" />
+    <dashboardlayout>
+      <portletfolder selectionindex="0" relationtype="LEFT" portletconfigorder="05c44096-f155-47b9-986d-924aded87063" folderid="org.eclipse.ui.internal.ViewStack@754c01" relatedfolderid="DashboardLayout.blankArea" ratio="0.95">
+        <designconfig namefontsize="16" descriptionshow="true" headertype="HEADLESS" namefontcolor="72,72,72" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="80de7639-4e0a-4043-846a-0afce5244331" folderid="org.eclipse.ui.internal.ViewStack@18a85f6" relatedfolderid="org.eclipse.ui.internal.ViewStack@754c01" ratio="0.2462845">
+        <designconfig namefontsize="16" descriptionshow="true" headertype="CUSTOM" namefontcolor="72,72,72" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="bf15f49c-c2e3-466f-889c-a349ffed4c47" folderid="folder" relatedfolderid="org.eclipse.ui.internal.ViewStack@18a85f6" ratio="0.0943662">
+        <designconfig namefontsize="16" descriptionshow="true" headertype="HEADLESS" namefontcolor="87,87,87" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="1ae44c4c-b3b4-4f13-af86-da1273a3bde1, 929208a5-af22-4d6e-8472-67379fb51ef0, 17650238-ea43-47d4-9417-0344ebc11c8c, 43e875db-c75b-4a53-8ab8-66d91913b567, 69294f95-1d43-49d0-9677-be0ec6e89baf, 7a778c96-a0f0-4d91-a1f0-a31238b3bad0, 5b263b9b-123c-4590-8750-c072c43f9db0" folderid="org.eclipse.ui.internal.ViewStack@1dc84bc" relatedfolderid="folder" ratio="0.38413686">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="DEFAULT" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="2822375c-1fc0-4f5f-90e3-92b06309c7c3" folderid="org.eclipse.ui.internal.ViewStack@ec6bb3" relatedfolderid="folder" ratio="0.556">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="4ffeef95-4c18-4e41-aa82-5be7e2f2092c" folderid="org.eclipse.ui.internal.ViewStack@c5fcee" relatedfolderid="org.eclipse.ui.internal.ViewStack@ec6bb3" ratio="0.5020243">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" description="This dashboard gives you a performance overview of every important web page. &#xA;Select a Web Page, analyze response time and load distribution in the charts and identify root cause of performance and scalability problems in the diagnostics charts." heightmode="AdjustToFontSize" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@18a85f6" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="80de7639-4e0a-4043-846a-0afce5244331">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="13" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Arial" style="NORMAL" height="1" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@1dc84bc" locationassource="false" addfilterinfo="false" name="Response Time Hotspots" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.Hotspots" id="929208a5-af22-4d6e-8472-67379fb51ef0" displaymode="Base">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="5" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="and" />
+        <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+        <criterion mode="selectedApplications" type="applications">
+          <applicationmetadata name="Default Application" isdefault="false" />
+        </criterion>
+        <criterion type="btm">
+          <record legacymode="false" context="Server" configuredforfullsplit="true" transaction="Web Page Requests">
+            <splitpattern stringmatch="3" equalstoemptystring="true" measurename="" textpattern="wps/myportal/ctcdemo/&lt;...&gt;" />
+          </record>
+        </criterion>
+        <criterion type="casuemdimension" />
+        <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion usefullanalysis="false" active="false" type="noanalysiscache" />
+        <criterion type="or" />
+        <criterion mode="all" enduser="false" type="purepaths" />
+        <criterion type="threads" enabled="false" filterbyid="false" />
+        <criterion type="timeframe">
+          <timeframe type="Last 15min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <criterion type="webpage">
+          <textpattern name="timerName" type="contains" enabled="true" />
+          <textpattern name="pageContext" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="webrequest">
+          <filteruripattern>
+            <stringmatchpattern match="contains" text="" />
+          </filteruripattern>
+          <filterquerypattern>
+            <stringmatchpattern match="contains" text="" />
+          </filterquerypattern>
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <datamodelconfig />
+      <masterreference portletid="bf15f49c-c2e3-466f-889c-a349ffed4c47" />
+      <analyzerparameters percentile="4" analyzerrecordlimit="-1" requiredrilldowndata="true" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="folder" locationassource="false" addfilterinfo="false" name="Business Transaction" ismaster="true" typeid="com.dynatrace.diagnostics.portlets.transaction.Transaction" id="bf15f49c-c2e3-466f-889c-a349ffed4c47" displaymode="Base">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="2" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="and" />
+        <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion type="casuemdimension" />
+        <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion usefullanalysis="false" active="false" type="noanalysiscache" />
+        <criterion type="or" />
+        <criterion mode="all" enduser="false" type="purepaths" />
+        <criterion type="threads" enabled="false" filterbyid="false" />
+        <criterion type="timeframe">
+          <timeframe type="Last 15min" />
+        </criterion>
+        <criterion customdefaultcolumnindex="0" columnlabel="" columnindex="0" isactive="false" sort="highestValues" type="topx" maxnrofrecords="10" customdefaultcolumnlabel="" />
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <criterion type="webpage">
+          <textpattern name="timerName" type="contains" enabled="true" />
+          <textpattern name="pageContext" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="webrequest">
+          <filteruripattern>
+            <stringmatchpattern match="contains" text="" />
+          </filteruripattern>
+          <filterquerypattern>
+            <stringmatchpattern match="contains" text="" />
+          </filterquerypattern>
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="TABLE" weights="500,500" />
+      <datamodelconfig>
+        <table sortcolumn="4" drawcolumn="-1" columnorder="0,1,18,2,3,7,6,5,4,19,8,11,12,13,14,15,16,17,9,10,20,21,22,23,24">
+          <dyncolumns>
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="" aggr="Count" />
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="" aggr="Avg" />
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="" aggr="Min" />
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="" aggr="Max" />
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="" aggr="Sum" />
+          </dyncolumns>
+          <column forcevisible="false" hidden="true" width="160" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="160" index="1" sort="None" />
+          <column forcevisible="false" hidden="false" width="147" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="432" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="79" index="4" sort="Down" />
+          <column forcevisible="true" hidden="false" width="74" index="5" sort="None" />
+          <column forcevisible="true" hidden="false" width="84" index="6" sort="None" />
+          <column forcevisible="false" hidden="false" width="97" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="55" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="12" sort="None" />
+          <column forcevisible="false" hidden="true" width="160" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="16" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="17" sort="None" />
+          <column forcevisible="false" hidden="false" width="20" index="18" sort="None" />
+          <column forcevisible="false" hidden="false" width="74" index="19" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="20" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="21" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="22" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="23" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="24" sort="None" />
+        </table>
+      </datamodelconfig>
+      <analyzerparameters analyzerrecordlimit="10000" requiredrilldowndata="true" context="SERVER" transaction="Web Page Requests" />
+      <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="true" logxaxis="false" title="Count" resolution="Auto" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="false" charttype="PieChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="true" showlegend="true" lockyaxis="true" showlabels="true">
+        <legendcomposition measure="true">
+          <pielabelcomposition unit="true" measure="true" value="true" />
+        </legendcomposition>
+        <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+      </chart>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" description="${context}" heightmode="UseBackgroundImageHeight" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="&#xA;Web Request Performance Analysis" folderid="org.eclipse.ui.internal.ViewStack@754c01" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Web Request Performance Analysis" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="05c44096-f155-47b9-986d-924aded87063">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="10" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Arial" style="BOLD" height="18" />
+      <image offset="-1" length="3448">
+        <chunk offset="0" data="iVBORw0KGgoAAAANSUhEUgAAAIkAAAA8CAMAAABl/Wk9AAAAilBMVEX///9yYp9yYqBtXJ2ro8S8ttBrWpxvXp1pWJvPy92vp8d1ZaFuXZzz8vfs6vJ2ZqKWirji3+vY1eT///7Lxtt+b6iBcqnp5/D6+fyRhbXFv9eNgLLw7vW3r86XjbaCdKukmsFkUZeHeq2mncHd2eddSZOdkr3FwNWlm8PNyNunn8G8tNGwp8rButPDWtBjAAAJSklEQVRoge2Yi3KjuBKGhWQjYS4CwkXcAsYMHhv7/V/v/C3sJHYmWzs7WzV7qkapihGSWp9a3a0WjP0pn0ty3vz2cj4RyWkvfntRGyLxFP/txd29kTi/t/zXSfgPHz8XzqWUXzT9Gomvtfbxix/Nb78P3R9ecOmPVTPqzyyfxv0sCW+y1Bsg6OylWcOdYpt6u/y9Mx9P6Wn27zUnzpIoKtPD86z5NU27n0V5IJFNxNhVy8JjLBy4bErG6g8SeWyY6fRN8XJo12gULo+z8jxhLM2dnyuPu5NPiC2FHBP2YjopX0NmdsIun68kIQs7fzUCnoeMmSQJLfWNgfM7iZfzd2PhP7KbpzePuyOhjGkMKuiC1Tw4YJI5cKz9+PxGsvN9VLgTzOiU+fwClOtq7xz9iPpGsg5y3sffkHyyRU6d/Q84jzqRC2NlE1i1e1p2VJM8H5a6vjToYnVSLXVXcUcspAwhx8mYTPvVPDfjpd7O+Y2kP1zrS0Fz6Lir6y4GpEavvr/UFYTOELoZ/a9IBsPaWV5CA930vMb/XPYZasyUsyASk0JhJmqki9bwu+J6vlxmnnsmTD10bDtfEsmUomKynvN8aekx3GnZp8Ys6HVw+ywkocn8BYkzYtEbfmVRyaLKSaklzzDjFL0wk8vYDqd/kxY0MolzLkSAJaLvi6EVmDggEgyiysHqjk2JYeGB92ig0QdNPpFAaNLwH5PoiJnF99iUGfPqY5MWd8ar7ThAwMUlknYZsNwwFg2NLOsBy3YsifHmK2bvHCIx9VzD0xatocN0jPEqy/uJCJNpJuUu46Fl5ix/TMIhsC5S5l2gQg15A98ZGIur0ZAqIvHy4Lz6FJQFTbXe95xbkmh2R7IQTSTJ6MYlkdCYWZFmprGYyCkRDHdkgYqEXu/B/ZkEA9IqYTXGL1h0WGmsrJzHCuosicRcdRBDWVfB++saUMJslEQyjZK0nuSr78iKSPwz1DSPzUILKsiAtJRkgRDaYNBJ/1gnckBX+GWXRyyDE0caZvJi2iiCvOgWTzDFC8tcOG21UDiB3jWRpL30oafoRsItCYcDMoynfY2hE5aRI6PbTWj6FQn0kNQGVpuw5Ip+zp0kKqP0jQQzndxACFePZ9p6M1qSQvr1M4kDkpd1/FSRnWQIIrBEdhOafUHC+5a1CTyZe3AYCm/kOtEQU6neSV7YSR0ulwEhjrBYfCf5pBOQvLDDOl6/kaBb+d2+bCBC8s8kjvUBllQS+4q/i8yxyqSXvBmGOCA72cJOcDwd96UxCUK6QAc23+yEpkgeSS4gaQLez0OsyYuJhHYnGaWshu8ImEWFaPiJhNRLUU1uzAuYXqW2piY1PDezvnPS4gCgbp/QzrsBGSlriKSMFS169Z07iT+TxQqszKT9TSfWMcpG0NCOz2lGCcAziaT6Czz1lQIrQqkz0LSCGHZrPNnEiJLhrGqKIHHV4V1ZWF3WtrL4H0n0CAdL93S2Ip6sOnEknAFxgHzwnF895BDjpzyW4j15qqxaaBURn1OICBPy1/cY+wKnCmxkCymSY2FEAiOkyhw8kAhqSUps9UbeSVahZUua6es6uVxi+UzCEY5YePFxsFnvpDeRjRpmY8+dcLI0s+Tr8UQ029zGk5ZwTa3lnSQhEjoi7Xgsb90dOpDn0g5tz45e0iFd8s95bL65XpcGcf+w3W5nehk0pL86hoWPy7WrDikSO8oVZEUNXh1zG2Nf0rmGngvu6N31ikSu3123s+ay79DtdMYMJHywC5YN+pJQJIrdpYMVfM6ohesKOgsC13XXM0FKXeQ2c+YCbYEu/FuD0EWhhbydO2ku0Y+vMgJOvd11FMZzcRMerNPIIL8JlXokeX/zlsG/qt039RZPvhLyQ/H8ofFfuu/cSH5Fxr9188qv03T92ST6K5J/WG6C+nEs/A+Cf1rOv0by4fFXSE5797eXvf1qUW7/AyVlf8p/v4S33aqTv+iUmKf6dju918oM473oV0nKb6sJy2L5sk+nn6bJgv32rbKMjlJKj/WvkiicVCicq+yLLju1fybx3TeSGgflOPZ+wL8a/7dJ+LjbbM45l+MXXTqxb78kCSvRUx7Zyf2reR75cyT7YFiFc8feyL2lWzzb0u2Sqdsmx0aKzULZa911XR0+kiRjQIkYC70T3c1tJ3sLZ93uBBFe1u1sdoRfaNakXbdGkO0uK5fd6Z2+VCtJiKslBESVFkrYq2TqqtdRqWuDDEPJE0sK/u3b3qEPTh9IWiQ7xe5NZ+nIlfJ7mluquFH7IdurDU1XqAJZ5TlXKtB0K8tVhWabl95J5BxG0YQLAe7DbSH4WCHN7Q1LOVKdakjOOS5mcRr2NGwR7vxoJwtMTKjRsyITJERxowWukkw7klfNhDSYvkKdHIH5YxWMVS/pseBSNo33cXccud/vlXRUR7vNB9zBBi47kDi+NULYCeXxSwfPDaUsHknMznGRgKme9m0WDlwQl7SFSFZtb12F+c5B7rFEySrChoomAon9OvWBRK3Jk6RLTRgLu+lTIWKTclnZhe7E3XfadIfU9ZEEW7/zlUBKuTPMlw12IhxdXBW0s7cGkmgx0y0HwhYLhfUiwSq4mj6RSCmDhswMtHbj2grUKQ+GB5JuzDUy4WcSMrJp8OmrjhGO7lG4C2vS1vDoC4hwjMdJTRfBi74fdYCIgZQzeiJZdWjLE4kYzDtJWah8zlLcJR69OElu80mVGcHzV1s2LdNSr+YIinrnUnS8CFnZ5hg6kU/x8u7Fq9hXYT//pLl4xe6Qvi2JKkmlPmZv5RPJdr8mGGwr3Yzh7vzmlrjmrCRRFcQxGTq7uuotByhk/xilHnSC6eQcsfKVdAkS636so90NNy5dZz33aXemQuYLfQ8ZcYdmg+sgBfM6Ci1vJJCqi31qJ6NvvuHGS4ik+CuScBRSwxpExd5JauXowqulGMIpl47/aCedDHiew9PFAXd63ILwLPj2I8lE1zAr6iAExAv6Cv6Z5Jv66EztkCOyFQdapdqf7fB2lCrIzMHffxNxpeAROAHfz8ul0YqiWUed09hXShb0LFR+D1sYtPYPN4iVKo9hAvk+f7ST8Hp8SN/MlB0z617tsb65WZnVWYtz4Hj0wvJ4LBn+fUgi2vR4rL3bixC91vH4vdvMVB9v6zfJ8XhM7Ynx3vyn/Cn/Z+V/gmXd/v67EJUAAAAASUVORK5CYII=" />
+      </image>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@1dc84bc" locationassource="false" addfilterinfo="false" name="Database" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.database.Database" id="17650238-ea43-47d4-9417-0344ebc11c8c" displaymode="Base">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="7" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="and" />
+        <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+        <criterion mode="selectedApplications" type="applications">
+          <applicationmetadata name="Default Application" isdefault="false" />
+        </criterion>
+        <criterion showrendering="true" isactive="true" shownetwork="true" type="browserpathtype" showjavascript="true" />
+        <criterion type="btm">
+          <record legacymode="false" context="Server" configuredforfullsplit="true" transaction="Web Page Requests">
+            <splitpattern stringmatch="3" equalstoemptystring="true" measurename="" textpattern="wps/myportal/ctcdemo/&lt;...&gt;" />
+          </record>
+        </criterion>
+        <criterion type="casuemdimension" />
+        <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+        <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion usefullanalysis="false" active="false" type="noanalysiscache" />
+        <criterion type="or" />
+        <criterion mode="all" enduser="false" type="purepaths" />
+        <criterion type="threads" enabled="false" filterbyid="false" />
+        <criterion type="timeframe">
+          <timeframe type="Last 15min" />
+        </criterion>
+        <criterion customdefaultcolumnindex="0" columnlabel="" columnindex="0" isactive="false" sort="highestValues" type="topx" maxnrofrecords="10" customdefaultcolumnlabel="" />
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <criterion type="webpage">
+          <textpattern name="timerName" type="contains" enabled="true" />
+          <textpattern name="pageContext" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="webrequest">
+          <filteruripattern>
+            <stringmatchpattern match="contains" text="" />
+          </filteruripattern>
+          <filterquerypattern>
+            <stringmatchpattern match="contains" text="" />
+          </filterquerypattern>
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="292,707" />
+      <datamodelconfig chartsortcolumn="27" selectedtab="0">
+        <table structuremode="connectionpools" sortcolumn="27" drawcolumn="-1" columnorder="0,1,2,16,17,18,19,20,21,3,27,32,29,6,7,8,13,23,9,4,35,5,10,11,24,12,14,15,22,25,26,28,34,30,31,33,36,37,38">
+          <column forcevisible="false" hidden="false" width="483" index="0" sort="None" />
+          <column forcevisible="false" hidden="false" width="300" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="300" index="2" sort="None" />
+          <column forcevisible="false" hidden="true" width="340" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="90" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="90" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="6" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="7" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="8" sort="None" />
+          <column forcevisible="false" hidden="false" width="140" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="12" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="16" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="19" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="20" sort="None" />
+          <column forcevisible="false" hidden="true" width="200" index="21" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="22" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="23" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="24" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="25" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="26" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="27" sort="Down" />
+          <column forcevisible="false" hidden="true" width="120" index="28" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="29" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="30" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="31" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="32" sort="None" />
+          <column forcevisible="false" hidden="true" width="20" index="33" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="34" sort="None" />
+          <column forcevisible="false" hidden="false" width="90" index="35" sort="None" />
+          <column forcevisible="false" hidden="true" width="90" index="36" sort="None" />
+          <column forcevisible="false" hidden="false" width="90" index="37" sort="None" />
+          <column forcevisible="false" hidden="true" width="300" index="38" sort="None" />
+        </table>
+        <table structuremode="flat" sortcolumn="30" drawcolumn="-1" columnorder="0,1,2,16,17,18,19,20,21,3,30,4,5,6,7,8,29,9,35,13,23,10,11,12,24,14,15,22,25,26,27,28,34,31,32,33,36,37,38">
+          <column forcevisible="false" hidden="false" width="300" index="0" sort="None" />
+          <column forcevisible="false" hidden="false" width="300" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="300" index="2" sort="None" />
+          <column forcevisible="false" hidden="true" width="340" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="90" index="4" sort="None" />
+          <column forcevisible="false" hidden="false" width="90" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="6" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="7" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="8" sort="None" />
+          <column forcevisible="false" hidden="false" width="140" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="12" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="16" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="19" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="20" sort="None" />
+          <column forcevisible="false" hidden="true" width="200" index="21" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="22" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="23" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="24" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="25" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="26" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="27" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="28" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="29" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="30" sort="Down" />
+          <column forcevisible="false" hidden="true" width="120" index="31" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="32" sort="None" />
+          <column forcevisible="false" hidden="true" width="20" index="33" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="34" sort="None" />
+          <column forcevisible="false" hidden="false" width="90" index="35" sort="None" />
+          <column forcevisible="false" hidden="true" width="90" index="36" sort="None" />
+          <column forcevisible="false" hidden="false" width="90" index="37" sort="None" />
+          <column forcevisible="false" hidden="true" width="300" index="38" sort="None" />
+        </table>
+        <table structuremode="poolusage" sortcolumn="10" drawcolumn="-1" columnorder="0,1,2,22,16,17,18,19,20,21,3,4,5,6,7,8,9,10,11,15,13,24,12,23,14,35,25,26,27,28,34,29,30,31,32,33,36,37,38">
+          <column forcevisible="false" hidden="false" width="300" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="300" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="300" index="2" sort="None" />
+          <column forcevisible="false" hidden="true" width="340" index="3" sort="None" />
+          <column forcevisible="false" hidden="true" width="90" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="90" index="5" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="140" index="9" sort="None" />
+          <column forcevisible="false" hidden="false" width="140" index="10" sort="Down" />
+          <column forcevisible="false" hidden="false" width="140" index="11" sort="None" />
+          <column forcevisible="false" hidden="false" width="140" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="140" index="13" sort="None" />
+          <column forcevisible="false" hidden="false" width="140" index="14" sort="None" />
+          <column forcevisible="false" hidden="false" width="140" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="16" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="19" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="20" sort="None" />
+          <column forcevisible="false" hidden="true" width="200" index="21" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="22" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="23" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="24" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="25" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="26" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="27" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="28" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="29" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="30" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="31" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="32" sort="None" />
+          <column forcevisible="false" hidden="true" width="20" index="33" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="34" sort="None" />
+          <column forcevisible="false" hidden="false" width="90" index="35" sort="None" />
+          <column forcevisible="false" hidden="true" width="90" index="36" sort="None" />
+          <column forcevisible="false" hidden="true" width="90" index="37" sort="None" />
+          <column forcevisible="false" hidden="true" width="300" index="38" sort="None" />
+        </table>
+      </datamodelconfig>
+      <masterreference portletid="bf15f49c-c2e3-466f-889c-a349ffed4c47" />
+      <analyzerparameters fixmissingpools="true" analyzerrecordlimit="10000" requiredrilldowndata="true" fixinsignificantpools="true" analyzergrouping="sqlstatement">
+        <keysmap />
+      </analyzerparameters>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" showlatency="false" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" folderid="org.eclipse.ui.internal.ViewStack@1dc84bc" addfilterinfo="false" autozoom="true" yscrollpos="0" ismaster="false" typeid="com.dynatrace.diagnostics.adm.ADM" viewmode="Topology" id="1ae44c4c-b3b4-4f13-af86-da1273a3bde1" displaymode="Base" zoomlevel="0.4" usespecificautorefresh="false" showentrypoints="true" sessiontype="live" locationascomparesource="false" usedashboardsource="true" locationassource="false" showlegend="true" name="Transaction Flow" xscrollpos="0" showdatabase="true">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="9" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="and" />
+        <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+        <criterion mode="selectedApplications" type="applications">
+          <applicationmetadata name="Default Application" isdefault="false" />
+        </criterion>
+        <criterion showrendering="true" isactive="true" shownetwork="true" type="browserpathtype" showjavascript="true" />
+        <criterion type="btm">
+          <record legacymode="false" context="Server" configuredforfullsplit="true" transaction="Web Page Requests">
+            <splitpattern stringmatch="3" equalstoemptystring="true" measurename="" textpattern="wps/myportal/ctcdemo/&lt;...&gt;" />
+          </record>
+        </criterion>
+        <criterion type="casuemdimension" />
+        <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+        <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion usefullanalysis="false" active="false" type="noanalysiscache" />
+        <criterion type="or" />
+        <criterion mode="all" enduser="false" type="purepaths" />
+        <criterion type="threads" enabled="false" filterbyid="false" />
+        <criterion type="timeframe">
+          <timeframe type="Last 15min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <criterion type="webpage">
+          <textpattern name="timerName" type="contains" enabled="true" />
+          <textpattern name="pageContext" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="webrequest">
+          <filteruripattern>
+            <stringmatchpattern match="contains" text="" />
+          </filteruripattern>
+          <filterquerypattern>
+            <stringmatchpattern match="contains" text="" />
+          </filterquerypattern>
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <datamodelconfig>
+        <table sortcolumn="0" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31">
+          <column forcevisible="false" hidden="false" width="100" index="0" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="4" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="6" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="7" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="8" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="9" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="10" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="11" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="13" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="14" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="16" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="19" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="20" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="21" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="22" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="23" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="24" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="25" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="26" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="27" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="28" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="29" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="30" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="31" sort="None" />
+        </table>
+      </datamodelconfig>
+      <masterreference portletid="bf15f49c-c2e3-466f-889c-a349ffed4c47" />
+      <analyzerparameters fixmissingpools="true" analyzerrecordlimit="-1" requiredrilldowndata="true" fixinsignificantpools="true" analyzeentrypoints="true">
+        <keysmap />
+      </analyzerparameters>
+      <expandstates>
+        <expandgroup expandstate="Auto" agentgroupid="B2B Web Frontend (.NET)" />
+        <expandgroup expandstate="Auto" agentgroupid="Browser (JavaScript)" />
+        <expandgroup expandstate="Auto" agentgroupid="Business Backend Server (Java)" />
+        <expandgroup expandstate="Auto" agentgroupid="Business Backend Server (Java)&lt;#|*:?&gt;type:1" />
+        <expandgroup expandstate="Auto" agentgroupid="BusinessBackend" />
+        <expandgroup expandstate="Auto" agentgroupid="CreditCardAuthorization" />
+        <expandgroup expandstate="Auto" agentgroupid="CreditCardAuthorization (C++)" />
+        <expandgroup expandstate="Auto" agentgroupid="CreditCardAuthorization (C++)&lt;#|*:?&gt;type:4" />
+        <expandgroup expandstate="Auto" agentgroupid="Customer Web Frontend (Java)" />
+        <expandgroup expandstate="Auto" agentgroupid="Customer Web Frontend (Java)&lt;#|*:?&gt;type:1" />
+        <expandgroup expandstate="Auto" agentgroupid="CustomerFrontend" />
+        <expandgroup expandstate="Expanded" agentgroupid="DB2|type:0" />
+        <expandgroup expandstate="Auto" agentgroupid="Database" />
+        <expandgroup expandstate="Expanded" agentgroupid="Database|type:0" />
+        <expandgroup expandstate="Auto" agentgroupid="Derby Client" />
+        <expandgroup expandstate="Auto" agentgroupid="Derby Client&lt;#|*:?&gt;type:0" />
+        <expandgroup expandstate="Expanded" agentgroupid="Desktop Browser|type:8" />
+        <expandgroup expandstate="Auto" agentgroupid="Domainless" />
+        <expandgroup expandstate="Auto" agentgroupid="Domainless&lt;#|*:?&gt;type:0" />
+        <expandgroup expandstate="Auto" agentgroupid="ExternalConfluence" />
+        <expandgroup expandstate="Auto" agentgroupid="ExternalJira" />
+        <expandgroup expandstate="Auto" agentgroupid="InternalConfluence" />
+        <expandgroup expandstate="Auto" agentgroupid="InternalJira" />
+        <expandgroup expandstate="Auto" agentgroupid="Mobile Application" />
+        <expandgroup expandstate="Auto" agentgroupid="Payment Backend (.NET)" />
+        <expandgroup expandstate="Auto" agentgroupid="SQL Server" />
+        <expandgroup expandstate="Auto" agentgroupid="SQL Server CE" />
+        <expandgroup expandstate="Auto" agentgroupid="Secretserver" />
+        <expandgroup expandstate="Expanded" agentgroupid="Synthetic|type:8" />
+        <expandgroup expandstate="Expanded" agentgroupid="Third Party Content|type:0" />
+        <expandgroup expandstate="Expanded" agentgroupid="WSPortalAppServer|type:1" />
+        <expandgroup expandstate="Expanded" agentgroupid="WSPortalWebServer|type:16" />
+        <expandgroup expandstate="Auto" agentgroupid="Webrequests" />
+        <expandgroup expandstate="Auto" agentgroupid="Webserver" />
+        <expandgroup expandstate="Auto" agentgroupid="WebserverBlog" />
+        <expandgroup expandstate="Auto" agentgroupid="Webservices" />
+        <expandgroup expandstate="Auto" agentgroupid="book.dynatrace.com" />
+        <expandgroup expandstate="Auto" agentgroupid="dTWebsite" />
+        <expandgroup expandstate="Auto" agentgroupid="eServices" />
+        <expandgroup expandstate="Auto" agentgroupid="localhost" />
+        <expandgroup expandstate="Auto" agentgroupid="unknown host" />
+        <expandgroup expandstate="Auto" agentgroupid="us.downloads" />
+      </expandstates>
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@ec6bb3" locationassource="false" addfilterinfo="false" name="Load vs. Response Time" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="2822375c-1fc0-4f5f-90e3-92b06309c7c3">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="11" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="selectedApplications" type="applications">
+          <applicationmetadata name="Default Application" isdefault="false" />
+        </criterion>
+        <criterion type="btm">
+          <record legacymode="false" context="Server" configuredforfullsplit="true" transaction="Web Page Requests">
+            <splitpattern stringmatch="3" equalstoemptystring="true" measurename="" textpattern="wps/myportal/ctcdemo/&lt;...&gt;" />
+          </record>
+        </criterion>
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 15min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="Load" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="1min" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="StackedBarChart" showheatfield="false" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="Requests/min" splitcharts="false" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition agent="true" measure="true" host="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(122,235,208,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="87ede15b-eb3c-3f20-911d-d4bda5957877" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/DX-Banking/Transfers/!ut/p/z1/pZDNCsIwDICfZU-QpNTCjqnFUmRlOMSZi_QkBZ0exOe3A6-2B3ML-b78gcAMsqR3vqZXfizpVvKzmMvYswpbrfbeOEYO0U00OMJRw6kKIIJUyt58_QlRW0uM3iJh6Cnu4mYgfTBVv7Svz_d136iGXwD55_4CrD7-CF73lxYirR8878cSM2buug8QMhgT/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(20,133,106,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="8e02d6c0-d1ad-3cfb-abef-5979f9bb7a18" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler/!ut/p/digest!sUj3TmgtFKDnMOg1tbzYfw/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(172,242,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="932f2d25-5574-3a56-8213-8155e2cf8cc7" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler/!ut/p/digest!ePDFFNZFuEmrmKqlmWDUBg/um/secure/currentuser/profile/jpegPhoto" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(133,84,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="9424d82e-f157-3ae8-ba4e-dc5f7a48b39f" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/ctcdemo/&lt;...&gt;/!ut/p/z1/&lt;...&gt;/dz/d5/L2dBISEvZ0FBIS9nQSEh" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(242,220,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="a1127211-14f4-3605-8a50-12c94b31b6a2" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/portal/ctcdemo/Location/!ut/p/z1/jZLbboMwDIafpS9AHE7tLmGjjI3SDjRRcoOikSE2Tmpop739YOKiU4Uz30X-P_t3bMLIkbCWX6qSD1XX8np8Z8zOEwDTdakDvgsUgjsabSNrRw-mTlJMYMY2Yctp68WeefgTDrix7hoA_r35yy-lE1Dwo4Dh9lD_k0HMv2Hg_E5fY7zy_6YGCB_GFOcnAcJ7j4r-k4Dh46WqA7nd3_WiRp6pJAy9gY1KsNdnAXakqjPNxjHXSy2CDSXJVOOrl1rfnYZaDFKru7JqNTnw4SzzRkjJS5G_dYUgmfd0cJ7HCmZ6Q52lOFUFyd55wRv5v6Kf4ptk4d4PonzrBKH3kAPpm9c5jlAFH1Z_iazSWa1-AGr_npc!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(235,235,122,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="ace6a71e-0742-3850-95be-48ad89a33041" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="services/JourneyService/findJourneys" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="Customer Web Frontend (Java)" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(221,34,202,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="ade179fa-5b02-3318-b24b-1381f2aba161" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/ctcdemo/Blog/!ut/p/z1/rZRNb9swDIb_SnbIURAVWbJzTIatXQcbW9qssS6BLNOJ1vojihq0-_VTtsNaFLUXNIIOIvTyAUUKL1V0RVWjD3ajvW0bfR_iXMn1NUA0n7MZXMyBwZcpyz5nImXpJKa3fYJoIal6-1p8l_35R0FfPuf0B1VUmcZ3fktz482oxLodw7_Ttq1xDJ1rN07XYyhxbzfNyDtt7l5GR1BnbEnzGEuY8kISDjIikUQkUwMJMRzACFkYlGag8FCZekfjjoJjPryxZhDy1ZBE9dXwZzZD08lDkfEzwdUND4JvMk0XwOETp9cndq0X-DUT5wWG55wZuOTnBrKTgUFd2XuPbo1NWWqPa64L5FHFCSaCk4gZQRJWMSIjHleyELEuOM0nwGICMWHyGWLvtfOnQcQryO4B3dN_Ah726Eb42KGz2Bgcas_k3P0-_UdcDXlQMMmJSz-mm4DVfktsU7V09cJbgsT-3O3ULJhV23h89HT1Pre6BNrVy2Wd8CdL7hYJcNEdft1Udb3OMnEI-2-QelFEsw-_AUiynNI!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(192,0,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="b443fa7e-9f50-4910-8f46-f5aa0b663666" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(76,133,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="b5c56459-bde4-3182-b11b-fcf43ea5a9bb" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/portal/ctcdemo/Contact/!ut/p/z1/jZLbboMwDIafpS9AHE7tLmGjjI3SDjRRcoOikSE2Tmpop739YOKiU4Uz30X-P_u3Y8LIkbCWX6qSD1XX8np8Z8zOEwDTdakDvgsUgjsabSNrR71HnaSYwIxtwpbT1os98_AnHHBj3TUA_Hvzl19KJ6DgRwHD7aH-J4OYf8PA-Z2-xviDqdjf1ADhw5ji_CRguL1U9cG3-79eNM5PAzLV_TBVC4bewEYl2OuzADtS1Zlm45jrpRbBhpJkqvHVS63vTkMtBqnVXVm1mhz4cJZ5I6TkpcjfukKQzHs6OM9jBTO9oc5SnKqCZO-84I38X9FP8U2ycO8HUb51gtB7yIH0zescR6iCD6u_RFbprFY_bwcRMA!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(235,219,122,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="b7914bce-1640-320c-a313-4a5b146d1dcf" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(49,223,32,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="b996930c-efdc-332b-8362-469850abd542" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler/!ut/p/digest!a6d5qXEeSH-SuL03N4VM2g/tm/ts:empty" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(242,220,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="bf7f2dd9-7e1d-35a4-806a-6afa3a95cb56" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="services/ConfigurationService/getAllPlugins" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(190,122,235,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="c34e2a56-e8fd-39b1-bea4-8de38d1b8aeb" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/ctcdemo/Program/Design-Track/design%20track/!ut/p/z1/rZRPT-MwEMW_Sjn0aHlcx056bNHCLigRFLo0vlSOM2kD5E9dUwGfft3dAyBEQrWNfMhIb35-M7IeVXRBVa135Uq7sqn1o69TJZc3AMF0yiZwPgUGv8YsOUtEzATn9K5LEMwkVR3917K7fy9Q3ff_pooqU7vWrWlqnBnkWDVDePtbNxUOobXNyupqCDluy1U9cFabh4_VHtSaMqdpiDmMeSYJBxmQQCKSsYGIGA5ghMwMStNj3DvbG4cvvgn4ftUnUV3D_91t33ZTbzJ8J7i45V5wJeN4Bhx-cHpz4NSdwMtEHBfoxzkycM6PDWQHA726KB8d2iXWea4dLrnOkAcFJxgJTgJmBIlYwYgMeFjITIQ64zQdAQsJhITJd4it09YdBhGfIJsntC_fBDxt0Q7wuUVbYm2wbz2jY-_78Bdx0ZchPuRGNj6NVx6r3ZqUddHQxYds8JLyfrNREx82Te3w2dHF_6XNT6BtNZ9XEX8hD7MIuGh3r7dFVS2TROz8-VfETmTB5OTkD0L2PdQ!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(229,229,77,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="ccb7d91b-4755-3295-87b1-b081e5c4de5d" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/portal/!ut/p/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(133,133,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="cd7db442-b170-357c-9d89-0f7b15876a7a" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(26,64,178,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="d15438a5-68e1-3c91-bc51-7d5aae94a155" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/wcm/myconnect/portal%20site/z6_000000000000000000000000a0/z6_p9a2ic42kg6da0ainds1md1000/z6_p9a2ic42kg6da0ainds1md1016/script%20portlet%20content%20item" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(242,209,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="d38ecaad-519e-3408-96c4-c475033d8f74" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/contenthandler/!ut/p/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(122,150,235,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="dca33a74-a031-37fe-babb-52222a3f566d" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/contenthandler/!ut/p/digest!MMqZ1mesr7fiMBq72WRlgQ/war/DXBankstatic/themes/DXBank/fonts/DroidSans.ttf" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(221,34,202,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="dd782d82-bf64-34fe-aab8-a9175b6567cc" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/ctcdemo/Blog/Entry/interview%20with%20jeremiah%20abblett%20on%20html5/!ut/p/z1/rZVNc5swEIb_ChcfNVpZSNhHu-N-pIOnTeI25uKRxGKUmI8QxYnz6yvaQ-JpA3EDwwwIvfvM7mrZpQm9okmp9narnK1KtfPrdSI3FwDhfM5m8GkODL5M2fLjUsRssRD0Z5cgPJc0eX1bfJfd9q2gy55z-oMmNDGlq11O18aZIMWiGsHzW14VOAK9q7b-a1U6LN0IrH82e4sPwYN1eXCNDRZW5YHSeofOBVUZ5K7YiRZeG5vStWaRRsWAGJxyEkackakUQBhnqKeYCTRZTzDe245g4nHUbd8KknccRito7eGVawbePumTJF0-_D7vvhNfeyejF4KzS-4F32QcnwOHBacXz1mPMIUp15JwkCEJJSKZGpgQwwGMkNqgNN3Ar0sxLNCHMzBwxYcGspOBXp3Znf8pNlimqXK44UojDzNOcCJ8wTMjyIRljMiQR5nUIlKa0_UYWEQgIky-QNw51bjTIOIvyO09Noc3Au7vsAnwscbGYmmwLz3jofN9ekWc9fU133jHTfwh3nqscjmxZVbRqxTv7LYMXKPMTSux17e3ycw3wLaxPTp69XoHrJtq26hiBC8Zxyv6GXoi5Uepe1NP7ASOF-zdwOMmtxLDegh8aA99lQ8MPD3ks75J8u_ye_PYPK00_3c418VqVUz4wVpycz4BLur902VWFJvlUuz9_WcRO6FDpY_3SaIPD78AjzWyKQ!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(178,94,26,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="e56de41a-e46e-3aff-8582-d4abb0df58a4" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/portal/ctcdemo/!ut/p/z1/&lt;...&gt;/dz/d5/L2dBISEvZ0FBIS9nQSEh" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(229,185,77,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="e976e56a-e439-3d35-868b-19865ee55ca3" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/portal/ctcdemo/Contact/!ut/p/z1/jZLbboMwDIafpS9AHE7tLmGjjI3SDjS15AZFJUVsnNTQTnv7wcRFpwpnvovsz_8f24SRA2ENv5YF78u24dXwTpmdJQCm61IHfBcoBA80WkfWhnrPOtljBWZsEzaftt7siYc_4YAb664B4D-av_xcOgEFPxQw3B7qfzSI-TcMnN_oS4wPY6rQHwQY3h7lRwGE35mK_Y0Lvp__7aBxfhRgqvthKgmG3sBKVbDVpwLsSFVnmg7fXM5JBCtKkrHHVye1rj33leilVrVF2Wiy5_1FZrWQkhciO7a5IKn3snNehw7m_o66SHEuc5KeeM5r-b-mn-KbpOHWD6Js7QSh95QB6er3KQ5QBh9Wd42swlksfgDLjFnO/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(20,48,133,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="e9dfd86f-a980-3dbf-910a-2f3793c82633" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/DX-Banking/Markets/!ut/p/z1/pZHBCsIwDEA_qUmthR1Ti7XIynCIMxfpSQZzehC_36p4ND2YW8h7CUkUq0HxnB_jOd_H65ynkh_ZnrqGdFwZvQ3WE1BMvsfWI6BVBxEAUCyUw9fvAYxzSBAcIMQG0zotWzQ7K_qlvTw_yL7VFb8Akt-Zil8Ayd8sKn4B-J_742d_-BH0uh_XEK794HbZv2OAkZ7hKuBt/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(229,77,77,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="eb02647b-db1b-3ee5-ae5e-b161554f3da2" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/wcm/myconnect/portal%20site/z6_000000000000000000000000a0/z6_p9a2ic42kg6da0ainds1md1000/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(13,54,89,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="ee1229ec-a2f5-309b-86b1-a1a3250e67b4" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler/!ut/p/digest!BPVtIiqdavuxOXYPpc0lPQ/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(133,117,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="f485736f-0cad-3291-beb6-7d09a28ce20b" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/portal/DX-Banking/!ut/p/z1/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(20,102,133,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="fa3e3f8d-2fc2-3cd2-aa70-34819c19d768" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/!ut/p/z1/&lt;...&gt;/dz/d5/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(133,20,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="fd049e44-8a81-36eb-ac7a-fbf2b29265ef" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler/!ut/p/digest!ERulv6dSwhnwQyhM_02yJA/um/secure/currentuser/profile/jpegPhoto" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(133,20,68,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="0773a3fe-4917-3cf9-bde3-a8f1dcfed419" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler/!ut/p/digest!a6d5qXEeSH-SuL03N4VM2g/rtm/rs:empty" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(89,78,13,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="131e7f69-74ed-39d3-8c34-3b596aaa9a19" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/!ut/p/z1/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(147,177,27,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="13540b0d-4544-37c1-8934-e23262d2251d" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/ctcdemo/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(235,122,122,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="14945680-4b00-3032-9216-fd0e88699a8a" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="services/BookingService/storeBooking" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="Customer Web Frontend (Java)" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(190,122,235,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="192a8504-99e6-3334-9ee3-9bf75b9fa37f" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/contenthandler/!ut/p/digest!lMci4kZQLkY43T30zHSrUA/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(20,102,133,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="19b7b4e6-6b8c-3d7a-b8c8-342c576ff6e3" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(178,65,26,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="1a76b80a-c93e-33fd-815f-1c7ec15f1673" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler/!ut/p/digest!Iu3OuLEt-TDtnuNemKljQg/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(47,27,177,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="1dc14822-1af1-33db-96be-94834936f8ce" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler/!ut/p/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(33,170,222,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="26134cf6-78ad-3993-899c-ff064ce8a331" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/portal/ctcdemo/Blog/!ut/p/z1/jZLLboMwEEW_JT-Ax7ySLqEllJaQFFQRvEFWcREtL8UkVf--ULFIFTHu7CzfM_d6PISRI2Etv1QlH6qu5fV4zpidJwCm61IHfBcoBHc02kbWju70NUkxgRnbhC1fWy_2zMOfcsCNddcA8O_NX37pOgEFPwoYHg_NPwXE8hsGzk8Dus1_HVThPxog_mFMcX4SIPzB1HHee9QxXvn_kwHD26eEqUbE0B3YqAR7fRZgS6pa02x85nrJIthQkkw9vnqp9d1pqMUgtborq1aTAx_OMm-ElLwU-VtXCJJ5TwfneexgpjfUWYpTVZDsnRe8kf9r-im-SRbu_SDKt04Qeg85kL55nesIVfBh9ZfIKp3V6gdsS5xp/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(242,200,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="29babf68-9f22-3dba-92c2-cfa5a531c56a" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler/!ut/p/digest!xo3h6SJmXxOh1YezuJGAqg/rtm/rs:empty" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(33,134,222,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="2a8f77d9-800f-37b8-b0f3-d212462ef5a1" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="orange-booking-payment.jsf" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(229,185,77,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="2bb000d6-141e-3d4a-8b52-149592c9f97b" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="dynaTraceMonitor" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="Customer Web Frontend (Java)" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(204,242,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="2ce0f8e8-82c8-36e1-9c50-5560cbf801c3" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/contenthandler/!ut/p/digest!MMqZ1mesr7fiMBq72WRlgQ/war/DXBankstatic/themes/DXBank/fonts/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(20,102,133,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="2dec57a8-3907-3b2f-8c16-8bac7063c325" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/ctcdemo/Program/Design-Track/design%20track/!ut/p/z1/rZNLU4MwFIX_Sl10mcmlgZQuwVHHOjDah0I2nRDCwxqgmKnWX29YaRfCdCSr3My5X869MwczHGFW8WOZc13WFX8zdczobg1g-77lwZ0PFtwvrPA2dALLIQS_9AnsFcWsp_-J9vd3Atb__zNmmIlKN7rAsdBikkpVT-HnVtRKTqFp67zlagqpfC_zaqJbLvbnVQdqRJnieC5TWJCEIgLURjaVEi0EuEgQAOHQREgqBowbZ51x-ON4YPrZkIT1Dd_tNjYe5r8Eyw0xgkcaBCsgcEPw-sKheoEPoTMu0IwzMnBLxgZaYwNnYwMv3-FyKFQm9bM2uA5yg-W6QGWV1Tg6C4uRlK-HA_NM-upKy0-No__Fr1HbrXLJCe2zMEQ8cYE4zfFrkym1Mw8sOX1cfQOlfICQ/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_S004BB1A0GJT30I9P6MMR030U1=CZ6_S004BB1A0GB010I91NFN5M1533=MKUP42ag=GB=/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(51,89,13,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="34165237-d38d-3aca-a739-9b278682cee2" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/contenthandler/!ut/p/&lt;...&gt;/mashup/ra:collection" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(26,107,178,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="3b400e5d-45a4-3db9-86ad-503397675b02" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/wcm/myconnect/portal%20site/z6_000000000000000000000000a0/z6_p9a2ic42kg6da0ainds1md1000/z6_p9a2ic42kg6da0ainds1md10p4/script%20portlet%20content%20item" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(118,26,178,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="3bc22c5c-727a-375f-a63d-6217b794fc18" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/DX-Banking/News/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziAywdjTydTYy83c1cHA0cPf1cgg19XQwN3M30w_EqMDDQjyJGf7CBgYmTk6GjgbuTgaGBp6Whn5ufqa-hSZAZXv1A48MJORCk3wAHcATpjyKkpCA3NDTCIF0RAC2uj_E!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(178,65,26,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="430f58cb-b3ab-3241-8a20-90c0b625875b" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/DX-Banking/Pay-Bills/!ut/p/z1/pZCxCgIxDIafxSdoUmvhxtRiLXLl8BDPLNLpKOjpID6_LbjaDmYL-b6E_ILFJHiJ7zTHV3os8Zb7C-vr0JH0WyUPTlsC8sGO2FuE_VqcqwCA4MrY6a8_AihjkMAZQPAdhl3Y9KiOuurn9fX7ru5r2fAzUPMH1fAzwP_kl4Hiw4-i8j-3EG5l-LyfSk2QaPUBR7pXyw!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(19,89,13,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="4811d1cc-3413-38f2-b67a-15c880d06afa" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/DX-Banking/!ut/p/z1/&lt;...&gt;/dz/d5/L2dBISEvZ0FBIS9nQSEh" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(77,187,229,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="48934dd6-e7ff-3966-825b-e18a89a182c7" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/portal/!ut/p/z1/&lt;...&gt;/dz/d5/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(131,236,121,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="4a0e8606-7bb3-32dd-a038-1d782d2e5f6f" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/ctcdemo/Program/Design-Track/design%20track/!ut/p/z1/rZNLU4MwFIX_Sl10mcmlgZQuwVHHOjDah0I2nRDCwxqgmKnWX29YaRfCdCSr3My5X869MwczHGFW8WOZc13WFX8zdczobg1g-77lwZ0PFtwvrPA2dALLIQS_9AnsFcWsp_-J9vd3Atb__zNmmIlKN7rAsdBikkpVT-HnVtRKTqFp67zlagqpfC_zaqJbLvbnVQdqRJnieC5TWJCEIgLURjaVEi0EuEgQAOHQREgqBowbZ51x-ON4YPrZkIT1Dd_tNjYe5r8Eyw0xgkcaBCsgcEPw-sKheoEPoTMu0IwzMnBLxgZaYwNnYwMv3-FyKFQm9bM2uA5yg-W6QGWV1Tg6C4uRlK-HA_NM-upKy0-No__Fr1HbrXLJCe2zMEQ8cYE4zfFrkym1Mw8sOX1cfQOlfICQ/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(184,222,33,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="4c456434-793e-317d-9fe6-2c6184fb45c0" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/ctcdemo/!ut/p/z1/&lt;...&gt;/dz/d5/L2dBISEvZ0FBIS9nQSEh" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(178,65,26,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="524998fc-bfb6-3e8b-9f5c-8902db72ed15" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/ctcdemo/Program/Design-Track/design%20track/!ut/p/z1/rZNLU4MwFIX_Sl10mcmlgZQuwVHHOjDah0I2nRDCwxqgmKnWX29YaRfCdCSr3My5X869MwczHGFW8WOZc13WFX8zdczobg1g-77lwZ0PFtwvrPA2dALLIQS_9AnsFcWsp_-J9vd3Atb__zNmmIlKN7rAsdBikkpVT-HnVtRKTqFp67zlagqpfC_zaqJbLvbnVQdqRJnieC5TWJCEIgLURjaVEi0EuEgQAOHQREgqBowbZ51x-ON4YPrZkIT1Dd_tNjYe5r8Eyw0xgkcaBCsgcEPw-sKheoEPoTMu0IwzMnBLxgZaYwNnYwMv3-FyKFQm9bM2uA5yg-W6QGWV1Tg6C4uRlK-HA_NM-upKy0-No__Fr1HbrXLJCe2zMEQ8cYE4zfFrkym1Mw8sOX1cfQOlfICQ/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_S004BB1A0GJT30I9P6MMR030U1=CZ6_S004BB1A0GB010I91NFN5M1533=MKN7QCLE6A=GB=/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(23,13,89,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="5280ad0c-1c2b-3d5f-bf6e-8f921692fc36" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/portal/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDXAARwP9iLxcq_zMFKvygmI9n_z0zDz9cLCWYAMDEycnQ0cDdycDQwNPS0M_Nz9TX0OTIDP9KPwmhutHEVJSkJNj6emoqAgAwlLPXA!!/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(147,177,27,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="5548c12a-4d45-32bc-ba4c-a68ae60464b0" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler/!ut/p/digest!sE_n0ptxFJ8VVIjCV0dRiw/um/secure/currentuser/profile/jpegPhoto" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(178,94,26,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="5d39f935-7df0-3cb8-811d-fef530f3f684" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/portal/ctcdemo/!ut/p/z1/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(222,140,33,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="5fcadbbe-ac24-3ad8-b741-0c2c7b0693b2" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/ctcdemo/Program/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zigw0MTJycDB0N3J0MDA08LQ393PxMfQ1NA830w_EpMAky04-iQD9IAUi_AQ7gaADUH0VISUFuaIRBuqIiAMVacP4!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(13,54,89,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="603b42aa-2829-3c50-a034-890b697ef25a" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/wcm/myconnect/portal%20site/z6_000000000000000000000000a0/z6_p9a2ic42kg6da0ainds1md1000/script%20portlet%20content%20item" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(204,242,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="65889025-0078-3057-96ff-fda5db7793b0" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/wcm/myconnect/portal%20site/z6_000000000000000000000000a0/z6_p9a2ic42kg6da0ainds1md1000/z6_p9a2ic42kg6da0ainds1md10h3/script%20portlet%20content%20item" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(166,221,242,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="661a6b2a-9e16-3f1e-9e0c-1d35065a1b81" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="services/ConfigurationService/getEnabledPluginNames" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(74,89,13,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="6a65f3dd-8afd-3c9e-911b-5b7577773bf4" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/contenthandler/!ut/p/war/DXBankstatic/themes/DXBank/fonts/fontawesome-webfont.woff" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(89,47,13,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="6da8a10b-bb68-36ca-a1fc-dfccca811731" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/DX-Banking/&lt;...&gt;/!ut/p/z1/&lt;...&gt;/dz/d5/L2dBISEvZ0FBIS9nQSEh" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(229,229,77,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="747b25e9-7f92-36c1-87e9-bb3255f6f911" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/DX-Banking/My-Accounts/!ut/p/z1/hY_BCgIhEIYfyX_EhD1qkkisRIu0zSU8hdBuHaLnz4Wu6dyG-b75ZwSLWfCaP-We3-W55kftr6xvp8HIsFfy6LUzMCG6iUZH0FJcmgAguDH2-udPgLKWDLwFIQwUD3E3kjrrpl_Xt_N92-_eX4HNx58yWz73EO798FpSSjPKFyd1kXM!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(242,231,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="76f8337c-6351-3658-9441-c7b3b3018246" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="services/AuthenticationService/authenticate" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="Customer Web Frontend (Java)" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(20,48,133,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="79d3b7c9-747a-3ea7-b7e3-624018a0f8df" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler/!ut/p/digest!SNIos8a_K0FfXVUkAKNMjg/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(20,133,106,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="7ddc51f7-7bd5-3e22-ab51-2ea491e1eba8" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/mycontenthandler/!ut/p/digest!xo3h6SJmXxOh1YezuJGAqg/tm/ts:empty" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(166,221,242,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" parentid="b443fa7e-9f50-4910-8f46-f5aa0b663666" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="7de3bdd7-40ea-38d5-b51a-197554dd016b" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="wps/myportal/DX-Banking/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziAywdjTydTYy83c1cHA0cPf1cgg19XQwNDAz0wwkpiAJKG-AAjjD9wQYGJk5Oho4G7k4GhgaeloZ-bn6mvoYmQWZg_XjtjyJkRUFuaIRBuqIiALM0V0U!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="WSPortalWebServer" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="0" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="Up" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="16" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <masterreference portletid="bf15f49c-c2e3-466f-889c-a349ffed4c47" />
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" exceptionexpanded="true" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" folderid="org.eclipse.ui.internal.ViewStack@1dc84bc" addfilterinfo="false" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.ErrorDetection" id="43e875db-c75b-4a53-8ab8-66d91913b567" displaymode="Base" browserexpanded="true" usespecificautorefresh="false" sessiontype="live" locationascomparesource="false" usedashboardsource="true" httpexpanded="true" locationassource="false" phpexpanded="true" name="Errors" logexpanded="true" moileexpanded="true">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="10" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="and" />
+        <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+        <criterion mode="selectedApplications" type="applications">
+          <applicationmetadata name="Default Application" isdefault="false" />
+        </criterion>
+        <criterion type="btm">
+          <record legacymode="false" context="Server" configuredforfullsplit="true" transaction="Web Page Requests">
+            <splitpattern stringmatch="3" equalstoemptystring="true" measurename="" textpattern="wps/myportal/ctcdemo/&lt;...&gt;" />
+          </record>
+        </criterion>
+        <criterion type="casuemdimension" />
+        <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion usefullanalysis="false" active="false" type="noanalysiscache" />
+        <criterion type="or" />
+        <criterion mode="all" enduser="false" type="purepaths" />
+        <criterion type="threads" enabled="false" filterbyid="false" />
+        <criterion type="timeframe">
+          <timeframe type="Last 15min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <criterion type="webpage">
+          <textpattern name="timerName" type="contains" enabled="true" />
+          <textpattern name="pageContext" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="webrequest">
+          <filteruripattern>
+            <stringmatchpattern match="contains" text="" />
+          </filteruripattern>
+          <filterquerypattern>
+            <stringmatchpattern match="contains" text="" />
+          </filterquerypattern>
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <datamodelconfig>
+        <table structuremode="errorsflat" sortcolumn="1" drawcolumn="-1" columnorder="0,1,2,3">
+          <column forcevisible="false" hidden="false" width="280" index="0" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="1" sort="Down" />
+          <column forcevisible="false" hidden="false" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="175" index="3" sort="None" />
+        </table>
+        <overviewtableconfig>
+          <table structuremode="errorsflat" sortcolumn="1" drawcolumn="-1" columnorder="0,1,2,3">
+            <column forcevisible="false" hidden="false" width="280" index="0" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="1" sort="Down" />
+            <column forcevisible="false" hidden="false" width="100" index="2" sort="None" />
+            <column forcevisible="false" hidden="false" width="175" index="3" sort="None" />
+          </table>
+        </overviewtableconfig>
+        <detailstableconfig>
+          <table sortcolumn="2" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7">
+            <column forcevisible="false" hidden="false" width="200" index="0" sort="None" />
+            <column forcevisible="false" hidden="false" width="80" index="1" sort="Down" />
+            <column forcevisible="false" hidden="false" width="50" index="2" sort="Down" />
+            <column forcevisible="false" hidden="false" width="150" index="3" sort="None" />
+            <column forcevisible="false" hidden="false" width="250" index="4" sort="None" />
+            <column forcevisible="false" hidden="false" width="250" index="5" sort="None" />
+            <column forcevisible="false" hidden="false" width="250" index="6" sort="None" />
+            <column forcevisible="false" hidden="false" width="250" index="7" sort="None" />
+          </table>
+        </detailstableconfig>
+      </datamodelconfig>
+      <masterreference portletid="bf15f49c-c2e3-466f-889c-a349ffed4c47" />
+      <analyzerparameters analyzerrecordlimit="1000" requiredrilldowndata="true" />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@c5fcee" locationassource="false" addfilterinfo="false" name="Response Time" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="4ffeef95-4c18-4e41-aa82-5be7e2f2092c">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="12" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="selectedApplications" type="applications">
+          <applicationmetadata name="Default Application" isdefault="false" />
+        </criterion>
+        <criterion type="btm">
+          <record legacymode="false" context="Server" configuredforfullsplit="true" transaction="Web Page Requests">
+            <splitpattern stringmatch="3" equalstoemptystring="true" measurename="" textpattern="wps/myportal/ctcdemo/&lt;...&gt;" />
+          </record>
+        </criterion>
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 15min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="Response Time" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="1min" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="AreaChart" showheatfield="false" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="ms" splitcharts="false" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition agent="true" measure="true" host="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="WebSphere Portal" sourcecolor="RGB(192,0,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="WebSphere Portal" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="57561c7e-b096-45d3-8a71-db3c2fdc6b33" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Requests" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="WebSphere Portal" application="" parentkeyid="Web Page Requests" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Web Page Requests" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Requests" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="0" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="Down" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="16" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <masterreference portletid="bf15f49c-c2e3-466f-889c-a349ffed4c47" />
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@1dc84bc" locationassource="false" addfilterinfo="false" name="Render Portlet Name" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.transaction.Transaction" id="5b263b9b-123c-4590-8750-c072c43f9db0" displaymode="Base">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="16" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="and" />
+        <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+        <criterion mode="selectedApplications" type="applications">
+          <applicationmetadata name="Default Application" isdefault="false" />
+        </criterion>
+        <criterion type="btm">
+          <record legacymode="false" context="Server" configuredforfullsplit="true" transaction="Web Page Requests">
+            <splitpattern stringmatch="3" equalstoemptystring="true" measurename="" textpattern="wps/myportal/ctcdemo/&lt;...&gt;" />
+          </record>
+        </criterion>
+        <criterion type="casuemdimension" />
+        <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion usefullanalysis="false" active="false" type="noanalysiscache" />
+        <criterion type="or" />
+        <criterion mode="all" enduser="false" type="purepaths" />
+        <criterion type="threads" enabled="false" filterbyid="false" />
+        <criterion type="timeframe">
+          <timeframe type="Last 15min" />
+        </criterion>
+        <criterion customdefaultcolumnindex="0" columnlabel="" columnindex="0" isactive="false" sort="highestValues" type="topx" maxnrofrecords="10" customdefaultcolumnlabel="" />
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <criterion type="webpage">
+          <textpattern name="timerName" type="contains" enabled="true" />
+          <textpattern name="pageContext" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="webrequest">
+          <filteruripattern>
+            <stringmatchpattern match="contains" text="" />
+          </filteruripattern>
+          <filterquerypattern>
+            <stringmatchpattern match="contains" text="" />
+          </filterquerypattern>
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="TABLE" weights="500,500" />
+      <datamodelconfig>
+        <table sortcolumn="28" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,28,27,29,30,31,33,32,34">
+          <dyncolumns>
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="PurePath Response Time" aggr="Count" />
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="PurePath Response Time" aggr="Avg" />
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="PurePath Response Time" aggr="Min" />
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="PurePath Response Time" aggr="Max" />
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="PurePath Response Time" aggr="Sum" />
+            <dyntablecolumn unit="ms" name="renderPortlet Exec Time" id="renderPortlet Exec Time" aggr="Count" />
+            <dyntablecolumn unit="ms" name="renderPortlet Exec Time" id="renderPortlet Exec Time" aggr="Avg" />
+            <dyntablecolumn unit="ms" name="renderPortlet Exec Time" id="renderPortlet Exec Time" aggr="Min" />
+            <dyntablecolumn unit="ms" name="renderPortlet Exec Time" id="renderPortlet Exec Time" aggr="Max" />
+            <dyntablecolumn unit="ms" name="renderPortlet Exec Time" id="renderPortlet Exec Time" aggr="Sum" />
+            <dyntablecolumn unit="ms" name="renderPortlet Time" id="renderPortlet Time" aggr="Count" />
+            <dyntablecolumn unit="ms" name="renderPortlet Time" id="renderPortlet Time" aggr="Avg" />
+            <dyntablecolumn unit="ms" name="renderPortlet Time" id="renderPortlet Time" aggr="Min" />
+            <dyntablecolumn unit="ms" name="renderPortlet Time" id="renderPortlet Time" aggr="Max" />
+            <dyntablecolumn unit="ms" name="renderPortlet Time" id="renderPortlet Time" aggr="Sum" />
+          </dyncolumns>
+          <column forcevisible="false" hidden="true" width="160" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="160" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="125" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="251" index="3" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="4" sort="Down" />
+          <column forcevisible="false" hidden="true" width="130" index="5" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="12" sort="None" />
+          <column forcevisible="false" hidden="true" width="160" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="16" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="20" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="90" index="19" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="20" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="21" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="22" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="23" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="24" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="25" sort="None" />
+          <column forcevisible="false" hidden="false" width="207" index="26" sort="None" />
+          <column forcevisible="true" hidden="false" width="214" index="27" sort="None" />
+          <column forcevisible="true" hidden="false" width="220" index="28" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="29" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="30" sort="None" />
+          <column forcevisible="false" hidden="false" width="197" index="31" sort="None" />
+          <column forcevisible="true" hidden="false" width="192" index="32" sort="None" />
+          <column forcevisible="true" hidden="false" width="194" index="33" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="34" sort="None" />
+        </table>
+      </datamodelconfig>
+      <masterreference portletid="bf15f49c-c2e3-466f-889c-a349ffed4c47" />
+      <analyzerparameters analyzerrecordlimit="10000" requiredrilldowndata="true" context="SERVER" transaction="Render Portlet Name" />
+      <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="true" logxaxis="false" title="renderPortlet Exec Time [ms] Maximum" resolution="Auto" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="false" charttype="PieChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="true" showlegend="true" lockyaxis="true" showlabels="true">
+        <legendcomposition measure="true">
+          <pielabelcomposition unit="true" measure="true" value="true" />
+        </legendcomposition>
+        <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+      </chart>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@1dc84bc" locationassource="false" addfilterinfo="false" name="Web Requests" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.webrequest.WebRequest" id="69294f95-1d43-49d0-9677-be0ec6e89baf" displaymode="Base">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="14" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="and" />
+        <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+        <criterion mode="selectedApplications" type="applications">
+          <applicationmetadata name="Default Application" isdefault="false" />
+        </criterion>
+        <criterion type="btm">
+          <record legacymode="false" context="Server" configuredforfullsplit="true" transaction="Web Page Requests">
+            <splitpattern stringmatch="3" equalstoemptystring="true" measurename="" textpattern="wps/myportal/ctcdemo/&lt;...&gt;" />
+          </record>
+        </criterion>
+        <criterion type="casuemdimension" />
+        <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion usefullanalysis="false" active="false" type="noanalysiscache" />
+        <criterion type="or" />
+        <criterion mode="all" enduser="false" type="purepaths" />
+        <criterion type="threads" enabled="false" filterbyid="false" />
+        <criterion type="timeframe">
+          <timeframe type="Last 15min" />
+        </criterion>
+        <criterion customdefaultcolumnindex="0" columnlabel="" columnindex="0" isactive="false" sort="highestValues" type="topx" maxnrofrecords="10" customdefaultcolumnlabel="" />
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <criterion type="webpage">
+          <textpattern name="timerName" type="contains" enabled="true" />
+          <textpattern name="pageContext" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="webrequest">
+          <filteruripattern>
+            <stringmatchpattern match="contains" text="" />
+          </filteruripattern>
+          <filterquerypattern>
+            <stringmatchpattern match="contains" text="" />
+          </filterquerypattern>
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <datamodelconfig>
+        <table sortcolumn="0" drawcolumn="-1" columnorder="26,0,30,1,28,29,2,27,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,31,32,33,34">
+          <column forcevisible="false" hidden="false" width="20" index="0" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="false" width="80" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="80" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="80" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="80" index="8" sort="None" />
+          <column forcevisible="false" hidden="false" width="80" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="80" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="80" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="80" index="12" sort="None" />
+          <column forcevisible="false" hidden="true" width="80" index="13" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="16" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="17" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="19" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="20" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="21" sort="None" />
+          <column forcevisible="false" hidden="false" width="90" index="22" sort="None" />
+          <column forcevisible="false" hidden="true" width="90" index="23" sort="None" />
+          <column forcevisible="false" hidden="true" width="90" index="24" sort="None" />
+          <column forcevisible="false" hidden="false" width="90" index="25" sort="None" />
+          <column forcevisible="false" hidden="false" width="20" index="26" sort="None" />
+          <column forcevisible="false" hidden="false" width="90" index="27" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="28" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="29" sort="None" />
+          <column forcevisible="false" hidden="false" width="34" index="30" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="31" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="32" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="33" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="34" sort="None" />
+        </table>
+      </datamodelconfig>
+      <masterreference portletid="bf15f49c-c2e3-466f-889c-a349ffed4c47" />
+      <analyzerparameters analyzershow="true" analyzerrecordlimit="10000" requiredrilldowndata="true" analyzergrouping="appUri" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" locationascomparesource="false" source="server://dynatracewsp01.softlayer.com" sessionid="WebSphere Portal" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@1dc84bc" locationassource="false" addfilterinfo="false" name="JSP Name" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.transaction.Transaction" id="7a778c96-a0f0-4d91-a1f0-a31238b3bad0" displaymode="Base">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="15" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="and" />
+        <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+        <criterion mode="selectedApplications" type="applications">
+          <applicationmetadata name="Default Application" isdefault="false" />
+        </criterion>
+        <criterion type="btm">
+          <record legacymode="false" context="Server" configuredforfullsplit="true" transaction="Web Page Requests">
+            <splitpattern stringmatch="3" equalstoemptystring="true" measurename="" textpattern="wps/myportal/ctcdemo/&lt;...&gt;" />
+          </record>
+        </criterion>
+        <criterion type="casuemdimension" />
+        <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion usefullanalysis="false" active="false" type="noanalysiscache" />
+        <criterion type="or" />
+        <criterion mode="all" enduser="false" type="purepaths" />
+        <criterion type="threads" enabled="false" filterbyid="false" />
+        <criterion type="timeframe">
+          <timeframe type="Last 15min" />
+        </criterion>
+        <criterion customdefaultcolumnindex="0" columnlabel="" columnindex="0" isactive="false" sort="highestValues" type="topx" maxnrofrecords="10" customdefaultcolumnlabel="" />
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <criterion type="webpage">
+          <textpattern name="timerName" type="contains" enabled="true" />
+          <textpattern name="pageContext" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="webrequest">
+          <filteruripattern>
+            <stringmatchpattern match="contains" text="" />
+          </filteruripattern>
+          <filterquerypattern>
+            <stringmatchpattern match="contains" text="" />
+          </filterquerypattern>
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="TABLE" weights="500,500" />
+      <datamodelconfig>
+        <table sortcolumn="26" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,33,32,34">
+          <dyncolumns>
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="PurePath Response Time" aggr="Count" />
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="PurePath Response Time" aggr="Avg" />
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="PurePath Response Time" aggr="Min" />
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="PurePath Response Time" aggr="Max" />
+            <dyntablecolumn unit="ms" name="PurePath Response Time" id="PurePath Response Time" aggr="Sum" />
+            <dyntablecolumn unit="ms" name="JSP Exec Time" id="JSP Exec Time" aggr="Count" />
+            <dyntablecolumn unit="ms" name="JSP Exec Time" id="JSP Exec Time" aggr="Avg" />
+            <dyntablecolumn unit="ms" name="JSP Exec Time" id="JSP Exec Time" aggr="Min" />
+            <dyntablecolumn unit="ms" name="JSP Exec Time" id="JSP Exec Time" aggr="Max" />
+            <dyntablecolumn unit="ms" name="JSP Exec Time" id="JSP Exec Time" aggr="Sum" />
+            <dyntablecolumn unit="ms" name="JSP Time" id="JSP Time" aggr="Count" />
+            <dyntablecolumn unit="ms" name="JSP Time" id="JSP Time" aggr="Avg" />
+            <dyntablecolumn unit="ms" name="JSP Time" id="JSP Time" aggr="Min" />
+            <dyntablecolumn unit="ms" name="JSP Time" id="JSP Time" aggr="Max" />
+            <dyntablecolumn unit="ms" name="JSP Time" id="JSP Time" aggr="Sum" />
+          </dyncolumns>
+          <column forcevisible="false" hidden="true" width="160" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="160" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="125" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="251" index="3" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="4" sort="Down" />
+          <column forcevisible="false" hidden="true" width="130" index="5" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="12" sort="None" />
+          <column forcevisible="false" hidden="true" width="160" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="16" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="20" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="90" index="19" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="20" sort="None" />
+          <column forcevisible="false" hidden="true" width="230" index="21" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="22" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="23" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="24" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="25" sort="None" />
+          <column forcevisible="false" hidden="false" width="193" index="26" sort="Down" />
+          <column forcevisible="true" hidden="false" width="178" index="27" sort="None" />
+          <column forcevisible="true" hidden="false" width="180" index="28" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="29" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="30" sort="None" />
+          <column forcevisible="false" hidden="false" width="130" index="31" sort="None" />
+          <column forcevisible="true" hidden="false" width="147" index="32" sort="None" />
+          <column forcevisible="true" hidden="false" width="145" index="33" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="34" sort="None" />
+        </table>
+      </datamodelconfig>
+      <masterreference portletid="bf15f49c-c2e3-466f-889c-a349ffed4c47" />
+      <analyzerparameters analyzerrecordlimit="10000" requiredrilldowndata="true" context="SERVER" transaction="JSP Name" />
+      <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="true" logxaxis="false" title="JSP Exec Time [ms] Average" resolution="Auto" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="false" charttype="PieChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="true" showlegend="true" lockyaxis="true" showlabels="true">
+        <legendcomposition measure="true">
+          <pielabelcomposition unit="true" measure="true" value="true" />
+        </legendcomposition>
+        <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+      </chart>
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
+
