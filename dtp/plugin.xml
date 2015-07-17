@@ -9,6 +9,7 @@
 	 <resource resource="dashboards/WebSphere Portal Process Monitoring.dashboard.xml" resource_type="dashboard"/>
 	 <resource resource="dashboards/WebSphere Portal SLA Compliance.dashboard.xml" resource_type="dashboard"/>
 	 <resource resource="dashboards/WebSphere Portal User Experience KPIs.dashboard.xml" resource_type="dashboard"/>
+	 <resource resource="dashboards/WebSphere Portal Page Request Performance.dashboard.xml" resource_type="dashboard"/>
      <resource resource="profiles/WebSphere Portal.profile.xml" resource_type="systemProfile" />
 	   </metainfo>
      </extension>
